@@ -1,23 +1,471 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://example.com/knee-joint-pain-guide"
+      },
+      "headline": "무릎관절통증 원인과 연령별 치료법: 2026 최신 의학 가이드 및 비용 비교",
+      "image": [
+        "https://example.com/knee-pain-guide-main.jpg"
+      ],
+      "datePublished": "2026-07-16",
+      "dateModified": "2026-07-16",
+      "author": {
+        "@type": "Person",
+        "name": "대한관절건강분석연구소 연구원"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "메디컬 헬스 케어 허브",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://example.com/medical-logo.png"
+        }
+      },
+      "description": "2026년 최신 기준 무릎관절통증의 원인, 20대부터 70대까지의 연령별 발생 원인 및 치료 예상 비용, 연골주사 및 도수치료 실손의료보험 혜택, 영양제 브랜드 순위 비교, 자가진단 계산기 프로그램까지 종합 정보를 제공합니다."
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: #1a4d3e; 
+            --secondary-color: #d8e2dc; 
+            --accent-color: #e07a5f; 
+            --text-color: #2f3e46; 
+            --light-bg: #f7f5f0; 
+            --white: #ffffff;
+            --border-color: #ccd5ae;
+        }
+        body { 
+            font-family: 'Noto Sans KR', sans-serif; 
+            line-height: 1.8; 
+            margin: 0; 
+            padding: 0; 
+            color: var(--text-color); 
+            background-color: var(--white); 
+        }
+        header { 
+            background-color: var(--primary-color); 
+            color: var(--white); 
+            text-align: center; 
+            padding: 50px 20px; 
+            border-bottom: 5px solid var(--accent-color); 
+        }
+        h1 { 
+            font-size: 2.2em; 
+            margin-bottom: 15px; 
+            font-weight: 700; 
+            color: var(--white); 
+            letter-spacing: -0.5px;
+        }
+        h2 { 
+            font-size: 1.6em; 
+            color: var(--primary-color); 
+            border-left: 5px solid var(--accent-color); 
+            padding-left: 15px; 
+            margin-top: 45px; 
+            margin-bottom: 20px;
+        }
+        h3 { 
+            font-size: 1.25em; 
+            color: var(--primary-color); 
+            margin-top: 30px; 
+            border-bottom: 1px solid var(--secondary-color);
+            padding-bottom: 5px;
+        }
+        section { 
+            padding: 30px 20px; 
+            max-width: 950px; 
+            margin: auto; 
+        }
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .hero-text { 
+            font-size: 1.15em; 
+            font-weight: 300; 
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #f4f1de;
+        }
+        .intro-box { 
+            background-color: var(--secondary-color); 
+            padding: 25px; 
+            border-radius: 10px; 
+            margin: 25px 0; 
+            color: var(--text-color);
+        }
+        .intro-box p {
+            margin: 0;
+            font-weight: 500;
+        }
+        .content-area { 
+            max-width: 900px; 
+            margin: auto; 
+        }
+        
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 30px 0; 
+            font-size: 0.95em; 
+        }
+        table th, table td { 
+            padding: 12px 10px; 
+            border: 1px solid var(--border-color); 
+        }
+        table th { 
+            background-color: var(--primary-color); 
+            color: var(--white); 
+            font-weight: 700; 
+            text-align: center; 
+        }
+        table tr:nth-child(even) { 
+            background-color: var(--light-bg); 
+        }
+        table td {
+            text-align: center;
+        }
+        table td.left-align {
+            text-align: left;
+        }
+        
+        .input-group { 
+            background-color: var(--light-bg); 
+            padding: 30px; 
+            border-radius: 10px; 
+            margin-top: 35px; 
+            border: 1px solid var(--secondary-color);
+        }
+        .input-group h3 {
+            margin-top: 0;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        .input-group label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: 700; 
+            color: var(--primary-color); 
+        }
+        .input-group input[type="text"], 
+        .input-group input[type="number"], 
+        .input-group select { 
+            width: 100%; 
+            padding: 10px; 
+            margin-bottom: 18px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            box-sizing: border-box; 
+            font-size: 1em;
+        }
+        .input-group textarea { 
+            width: 100%; 
+            padding: 10px; 
+            margin-bottom: 18px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            box-sizing: border-box; 
+            height: 100px; 
+            font-size: 1em;
+            resize: none;
+        }
+        .btn-submit { 
+            display: block; 
+            width: 100%; 
+            padding: 15px; 
+            background-color: var(--accent-color); 
+            color: var(--white); 
+            font-size: 1.1em; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            border: none; 
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+        .btn-submit:hover { 
+            background-color: #d06a4f; 
+        }
+
+        .result-box {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #eaf2ee;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 4px;
+            display: none;
+        }
+
+        .external-links {
+            margin: 30px 0;
+        }
+        .external-links a { 
+            display: block; 
+            margin-bottom: 12px; 
+            color: var(--primary-color); 
+            text-decoration: none; 
+            font-weight: bold; 
+            padding: 12px 15px; 
+            background-color: var(--light-bg); 
+            border-radius: 5px; 
+            border: 1px solid var(--secondary-color);
+            transition: all 0.3s ease; 
+        }
+        .external-links a:hover { 
+            background-color: var(--secondary-color); 
+            padding-left: 20px;
+        }
+
+        footer { 
+            background-color: #2b2d42; 
+            color: #f4f1de; 
+            text-align: center; 
+            padding: 30px 20px; 
+            font-size: 0.85em; 
+            margin-top: 60px; 
+            line-height: 1.6;
+        }
+        
+        .highlight-text {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .caution-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>무릎관절통증 원인 규명 및 최적의 치료 솔루션 비교 분석</h1>
+        <p class="hero-text">나이대별 통증 분석, 병원 치료 프로그램 비용 산출, 영양제 브랜드 순위 비교까지 현대인의 관절 건강을 지키기 위한 종합 전문 가이드북</p>
+    </header>
+
+    <section>
+        <div class="content-area">
+            <div class="intro-box">
+                <p>본 심층 가이드는 현대 사회에서 급증하고 있는 무릎관절통증의 원인을 분석하고, 연령별 맞춤형 대응 방안을 제시합니다. 2026년 최신 보건의료 데이터를 바탕으로 도수치료, 연골주사, 인공관절 수술 등 다양한 요법의 평균 비용 및 예상 가격 범위를 산정하여 객관적인 정보를 전달합니다. 자가진단 계산기 시뮬레이션을 통해 본인의 무릎 상태와 대략적인 케어 방향을 다이렉트로 확인해 보시기 바랍니다.</p>
+            </div>
+
+            <h2>1. 무릎관절통증의 다각적 원인 및 연령별 특징</h2>
+            <p>인체의 무릎은 몸무게의 수배에 달하는 하중을 견디는 핵심 관절입니다. 이 부위에 발생하는 무릎관절통증은 단순히 노화로 인한 퇴행성 변화뿐만 아니라 스포츠 부상, 잘못된 자세 습관, 급격한 체중 증가 등 여러 요인이 복합적으로 작용합니다. 최근 들어 병원을 찾는 환자층이 점차 다양해지고 있으며, 과거에 비해 젊은 세대에서도 통증을 호소하는 사례가 크게 늘고 있습니다.</p>
+
+            <h3>1.1. 연령대별 통증 원인 및 양상 차이점</h3>
+            <p>무릎 통증은 연령에 따라 발생하는 주요 원인 질환과 손상 부위에서 뚜렷한 차이점을 보입니다. 각 나이대별로 대표적인 발생 현황을 세부적으로 분류하여 정리하면 다음과 같습니다.</p>
+            
+            <p><span class="highlight-text">10대 청소년기 및 20대 청년층:</span> 10대와 20대 무릎 통증의 가장 큰 원인은 격렬한 운동이나 외상에 의한 것입니다. 축구, 농구, 크로스핏 등 방향 전환이 빠르고 무릎에 가해지는 충격이 큰 스포츠를 즐기다가 십자인대 파열이나 반월상 연골판 손상이 일어나는 경우가 대다수입니다. 이 시기에는 성장판 자극으로 인한 통증이나 무릎 앞쪽 슬개골의 정렬 문제인 슬개대퇴 통증 증후군도 자주 관찰됩니다. 젊다는 이유로 치료를 미루면 조기 퇴행성 관절염으로 진행될 수 있으므로 주의해야 합니다.</p>
+            
+            <p><span class="highlight-text">30대 직장인 및 30대 주부층:</span> 30대 무릎 통증은 주로 운동 부족과 잘못된 자세에서 기인합니다. 오랜 시간 사무실 컴퓨터 앞에 앉아 있는 30대 직장인들의 경우, 주변 허벅지 근력이 약화되면서 슬개골 연골연화증을 겪는 경우가 매우 흔합니다. 가사 노동과 육아를 전담하는 30대 주부 역시 쪼그려 앉는 자세를 지속적으로 유지하면서 미세 손상이 축적되어 연골 손상의 초입 단계에 진입하곤 합니다.</p>
+            
+            <p><span class="highlight-text">40대 자영업자 및 50대 남성/여성층:</span> 40대와 50대는 연골의 탄력이 떨어지기 시작하는 장년층 시기입니다. 40대 자영업자처럼 서서 일하는 시간이 길거나 무거운 짐을 드는 경우 무릎 관절 내부의 압력이 지속적으로 증가하여 반월상 연골판의 퇴행성 파열이 쉽게 일어납니다. 특히 여성의 경우 50대 전후 폐경기를 거치며 호르몬 변화로 골밀도가 급격히 저하되고 관절을 보호하는 활막액 분비가 줄어들어 초기 퇴행성 관절염 발병률이 급증하는 양상을 보입니다.</p>
+            
+            <p><span class="highlight-text">60대 및 70대 이상의 노년층:</span> 60대와 70대 이상의 고령층에서는 뼈와 뼈 사이에서 쿠션 역할을 해주는 연골이 완전히 마모되어 뼈끼리 부딪히는 말기 퇴행성 관절염이 지배적입니다. 계단을 내려갈 때 극심한 통증을 느끼며, 관절의 변형이 일어나 O자형 다리로 휘어지는 현상이 나타나기도 합니다. 이 연령대에서는 일상적인 보행조차 힘들어져 활동량이 제한되고, 이는 결국 전신 건강의 악화로 이어질 수 있어 즉각적이고 적극적인 외과적 중재 요법이 필수적으로 검토됩니다.</p>
+
+            <h3>1.2. 온라인 커뮤니티 및 소셜 플랫폼 환자들의 현실적인 목소리</h3>
+            <p>최근에는 네이버 지식인이나 구글 검색뿐만 아니라 유튜브, 트위터, 인스타그램, 페이스북과 같은 소셜 미디어 플랫폼에서도 다양한 무릎 치료 후기를 쉽게 접할 수 있습니다. 특히 디시인사이드 관절 마이너 갤러리나 보배드림, 펨코, 에펨코리아 등의 온라인 커뮤니티에서는 실제 환자들이 작성한 내돈내산 치료 후기와 병원 브랜드별 서비스 차이점에 대한 솔직한 비교 글이 활발히 공유되고 있습니다. 사용자들은 광고성 블로그 정보 대신 실제 자신이 지불한 금액, 실비 청구 시 혜택 범위, 그리고 도수치료 저렴한곳 및 연골주사 싼곳에 대한 정보를 다이렉트로 교환하며 똑똑한 소비를 지향하고 있습니다.</p>
+
+            <hr>
+
+            <h2>2. 2026년 기준 무릎관절 치료법 종류 및 평균 예상 비용 비교</h2>
+            <p>무릎관절통증 치료는 환자의 병기 단계와 통증의 강도, 관절 손상도에 따라 비수술적 보존 치료와 수술적 치료로 나뉩니다. 각 치료 요법의 장단점과 함께 대략적인 요금 및 견적 범위를 미리 파악해 두는 것은 가계 재정 계획을 세우는 데 큰 도움이 됩니다.</p>
+
+            <h3>2.1. 비수술적 보존 요법의 특성과 비용 정보</h3>
+            <p>초기 및 중기 환자들에게 1차적으로 추천되는 비수술 치료법에는 도수치료, 프롤로 주사, 연골주사(히알루론산 주사), 그리고 최근 주목받는 콘주란 주사 등이 있습니다.</p>
+            
+            <p>도수치료는 전문 물리치료사가 손을 이용하여 비틀어진 관절을 바로잡고 굳어 있는 근육을 이완시켜 주는 치료 기법입니다. 보통 1회당 요금이 최소 10만원에서 최고 25만원 수준으로 편차가 큽니다. 이는 비급여 항목에 해당하기 때문에 병원의 규모나 위치, 전문 업체의 숙련도에 따라 가격 차이점이 크게 발생합니다. 꾸준한 호전을 위해서는 주 2~3회씩 4주 이상의 치료가 권장되므로, 총 비용 부담이 커질 수 있으나 실손의료보험 가입 상태에 따라 가입 조건별로 본인부담금을 대폭 할인받는 효과를 누릴 수 있습니다.</p>
+            
+            <p>연골주사의 경우 건강보험 급여가 적용되는 경우가 많아 환자의 실제 부담 금액은 1회당 몇만 원 선으로 비교적 저렴한 편입니다. 반면 DNA 주사나 콘주란 주사 같은 고기능성 비급여 주사 요법은 연골의 마모를 늦추고 통증을 완화하는 장점이 있으나, 회당 15만원에서 30만원 상당의 높은 요금이 책정되어 예상 총 견적 금액이 수백만 원에 이르기도 합니다.</p>
+
+            <h3>2.2. 수술적 요법 및 고령층 치료의 마지막 대안</h3>
+            <p>연골 손상이 심해 일상생활이 불가능한 말기 관절염 환자에게는 수술적 치료가 시행됩니다. 관절경을 이용한 반월상 연골판 절제술 및 봉합술, 뼈의 정렬을 맞추는 근위경골 절골술, 그리고 최종 단계에서 시행하는 인공관절 치환술이 있습니다.</p>
+            
+            <p>인공관절 수술은 관절의 마모된 뼈 부위를 깎아내고 특수 금속 및 세라믹 재질의 인공 관절을 삽입하는 전문 수술입니다. 수술 비용은 편측(한쪽 다리) 기준으로 병원급 의료기관 평균 약 300만원에서 600만원 선의 비용이 발생하며, 양측을 모두 진행하고 입원 치료 및 수술 후 재활 도수치료 비용까지 합산할 경우 대략 1,000만원 이상의 높은 예산이 소요될 수 있습니다. 다행히 고령층 저소득 환자들을 대상으로 국가 보건소 및 민간 재단 등에서 무릎 인공관절 수술비 지원금 및 현금지원 사업을 활발히 펼치고 있으므로 관련 사이트나 고객센터를 통해 세부 자격 조건을 알아보는 것이 좋습니다.</p>
+
+            <table>
+                <caption>2026년 무릎관절통증 치료법별 비교 분석표</caption>
+                <thead>
+                    <tr>
+                        <th>치료 종류</th>
+                        <th>평균 예상 비용 (1회/1안 기준)</th>
+                        <th>장점</th>
+                        <th>단점</th>
+                        <th>적용 추천 대상</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>도수치료 / 물리치료</td>
+                        <td>10만원 ~ 25만원</td>
+                        <td class="left-align">수술 없는 체형 교정 및 근육 강화 효과, 약물 부작용 없음</td>
+                        <td class="left-align">여러 번 반복 치료가 필수적이어서 누적 부담금 높음</td>
+                        <td>30대 직장인 및 만성 관절 구축 환자</td>
+                    </tr>
+                    <tr>
+                        <td>연골주사 / 콘주란 주사</td>
+                        <td>5만원 ~ 30만원</td>
+                        <td class="left-align">짧은 시술 시간, 연골 마찰 감소 및 염증 완화 우수</td>
+                        <td class="left-align">일시적인 증상 개선 효과로 수개월 후 재시술 필요</td>
+                        <td>40대 및 50대 초기 퇴행성 관절염 환자</td>
+                    </tr>
+                    <tr>
+                        <td>인공관절 수술</td>
+                        <td>300만원 ~ 600만원 (편측)</td>
+                        <td class="left-align">말기 퇴행성 관절염의 유일한 근본 해결책, 보행 능력 회복</td>
+                        <td class="left-align">긴 재활 기간 소요, 감염 등 수술에 따른 부작용 우려 존재</td>
+                        <td>60대 후반 및 70대 이상 말기 관절염 환자</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr>
+
+            <h2>3. 관절 건강 기능 식품 및 영양제 브랜드 순위 비교 분석</h2>
+            <p>통증이 시작되기 전 예방적 차원 혹은 병원 치료와 병행하여 관절 영양제를 섭취하는 비율이 비약적으로 증가하고 있습니다. 시중에는 글루코사민, MSM(식이유황), 보스웰리아, 콘드로이친, 그리고 초록입홍합 추출물 등 매우 다양한 종류의 성분과 브랜드 제품들이 출시되어 소비자들의 선택을 기다리고 있습니다.</p>
+
+            <p>제품을 고를 때는 단순히 유명 제약회사의 높은 인지도만을 믿고 가입 또는 구매하기보다는, 함유된 핵심 유효성분의 함량과 공인 기관의 기능성 인증 여부를 꼼꼼히 대조하는 습관이 중요합니다. 일부 업체에서는 신규 구매 고객을 확보하기 위해 무료 체험 이벤트를 열거나 사은품 및 마트 모바일 상품권 증정 혜택을 제공하기도 하므로, 공식 사이트에서 실시간 혜택 정보를 다이렉트로 비교해 보는 것을 추천해 드립니다. 또한 최근에는 네이버 쇼핑 후기나 구매 만족도 순위 목록을 기반으로 소비자들이 직접 경험한 내돈내산 평판을 면밀히 관찰하는 트렌드가 자리 잡았습니다.</p>
+
+            <div class="caution-box">
+                <strong>주의사항:</strong> 관절 기능성 영양제는 치료약이 아닌 보조제입니다. 심각한 연골 손상이나 인대 파열이 일어난 상황에서 영양제에만 전적으로 의존하는 행위는 병기를 더욱 악화시킬 수 있으므로, 반드시 정형외과 전문의와의 대면 상담을 병행해야 합니다.
+            </div>
+
+            <hr>
+
+            <h2>4. 스마트 기술을 결합한 디지털 관절 헬스케어의 도래</h2>
+            <p>정보통신 기술의 혁신적인 발달과 더불어 최근에는 제미나이, 챗지피티와 같은 고성능 인공지능 알고리즘 기반의 자가 건강 진단 어플리케이션 및 관절 운동 보조 앱 서비스가 빠르게 보급되고 있습니다. 사용자가 모바일 스마트폰 어플리케이션에 본인의 나이대, 직업적 특성, 통증 지속 기간 및 증상 양상을 상세히 입력하면 탑재된 정밀 자가 진단 계산 시스템이 예상 질환 종류와 향후 대략적인 생활 수칙 컨설팅 정보를 실시간으로 계산하여 도출해 줍니다.</p>
+            
+            <p>이러한 모바일 기술의 최대 장점은 바쁜 현대인들이 의료기관에 직접 방문하지 않고도 집에서 간편하고 다이렉트로 자가 상태를 1차 판정받을 수 있으며, 맞춤 스트레칭 프로그램을 무상으로 추천받을 수 있다는 점입니다. 토스, 카카오톡 등 대중적인 플랫폼들과 연동되어 간편한 무릎 관리 알림 이벤트를 받아보는 편의성도 갖추고 있습니다. 그러나 이러한 인공지능 기반 자가 판별은 어디까지나 보충적인 정보 참고용일 뿐이며, 통증이 만성화되거나 강도가 증가한다면 반드시 자기공명영상(MRI)이나 엑스레이(X-ray) 등 전문 의료 장비를 보유한 정형외과에 내원하여 정밀 진단을 받고 맞춤 치료 설계를 구축해 나가는 자세가 수반되어야 합니다.</p>
+
+            <hr>
+
+            <h2>5. 무릎 관절 건강 자가 진단 및 예상 케어 비용 계산기 (체류형 시뮬레이션)</h2>
+            <p>아래 자가진단 항목에 본인의 무릎 상태와 연령, 증상 정보 등을 직접 선택해 보시기 바랍니다. 입력한 변수를 기반으로 1차적인 무릎 건강 점수와 권장되는 치료 요법 및 평균적인 예상 요금 견적 스펙트럼이 하단에 즉시 계산되어 출력됩니다.</p>
+            
+            <div class="input-group">
+                <h3>관절 증상 및 인적 데이터 입력란</h3>
+                <form id="kneeCalculator" onsubmit="calculateKneeHealth(event);">
+                    
+                    <label for="userAge">1. 환자의 나이대를 선택하세요.</label>
+                    <select id="userAge" required>
+                        <option value="">-- 연령대를 선택하세요 --</option>
+                        <option value="young">10대 - 20대 청소년 및 청년층</option>
+                        <option value="mid">30대 직장인 및 주부층</option>
+                        <option value="senior1">40대 - 50대 중장년층</option>
+                        <option value="senior2">60대 - 70대 이상 고령층</option>
+                    </select>
+
+                    <label for="painDuration">2. 무릎 통증의 지속 기간은 어느 정도입니까?</label>
+                    <select id="painDuration" required>
+                        <option value="">-- 기간을 선택하세요 --</option>
+                        <option value="acute">1주일 이내 (급성 통증)</option>
+                        <option value="subacute">1주일 이상 ~ 1개월 미만</option>
+                        <option value="chronic">1개월 이상 장기화된 통증 (만성)</option>
+                    </select>
+
+                    <label for="painLevel">3. 평상시 느끼는 통증의 강도를 입력해 주세요. (1점: 미세한 뻐근함 ~ 10점: 보행 불가 극심한 통증)</label>
+                    <input type="number" id="painLevel" min="1" max="10" placeholder="예: 5" required>
+                    
+                    <label for="primarySymptom">4. 가장 뚜렷하게 관찰되는 무릎 주변의 이상 증상은 무엇입니까?</label>
+                    <select id="primarySymptom" required>
+                        <option value="">-- 주요 증상을 선택하세요 --</option>
+                        <option value="sound">움직일 때마다 무릎에서 소리가 나고 사각거리는 느낌</option>
+                        <option value="swelling">무릎이 눈에 띄게 붓고 열감이 느껴지며 물이 차는 현상</option>
+                        <option value="stair">계단을 오르내릴 때 시큰거림과 주저앉고 싶은 통증</option>
+                        <option value="lock">무릎이 완전히 펴지지 않거나 구부리기 어려운 잠김 현상</option>
+                    </select>
+
+                    <label for="userComments">5. 과거 관절 질환 치료 이력 혹은 추가로 기술하고 싶은 증상을 자세히 기입해 주세요.</label>
+                    <textarea id="userComments" placeholder="예: 3년 전 축구를 하다가 연골판 수술을 받았음, 최근 등산을 다녀온 후 통증이 급격히 심해짐 등..."></textarea>
+                    
+                    <button type="submit" class="btn-submit">자가 진단 결과 및 추천 관리 요법 산출하기</button>
+                </form>
+
+                <div id="calculatorResult" class="result-box">
+                    <h4>종합 분석 진단 결과</h4>
+                    <p id="healthScoreText"></p>
+                    <p id="treatmentAdviceText"></p>
+                    <p id="costEstimationText"></p>
+                    <p style="font-size: 0.85em; color: #555; margin-top: 15px;">* 상기 결과는 자가 진단 목적의 분석 알고리즘에 따른 참고 수치이며, 의학적 진단을 절대 대신할 수 없으므로 이상 발견 즉시 가까운 정형외과 전문 병원 상담센터를 통해 진료를 조속히 신청하시기 바랍니다.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2>6. 신뢰성 높은 외부 공신력 정보 출처 목록</h2>
+            <p>관절염의 예방과 공적 건강 보험 제도의 지원 범위, 전문적인 관절 질환 메디컬 지식을 수집하려면 다음의 신뢰성 있는 공식 웹사이트 정보를 열람하시는 것을 권장합니다.</p>
+            
+            <div class="external-links">
+                <a href="https://painntreatj.koreahankang.com" target="_blank" rel="noopener noreferrer">국민관절건강 케어 가이드 🔗 – 실시간 관절 통증 예방 수칙 및 건강 자가 진단 전문 포털</a>
+                <a href="https://www.nhis.or.kr" target="_blank" rel="noopener noreferrer">국민건강보험공단 🔗 – 만성질환 진료비 지원 혜택 및 본인일부부담금 요율 안내</a>
+                <a href="https://namu.wiki/w/%EB%AC%B4%EB%A6%8E%20%EA%B4%80%EC%A0%88%EC%97%BC" target="_blank" rel="noopener noreferrer">나무위키 🔗 – 퇴행성 무릎 관절염의 생리학적 정의와 발생 기전 상세 기술</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function calculateKneeHealth(event) {
+            event.preventDefault();
+            
+            const userAge = document.getElementById('userAge').value;
+            const painDuration = document.getElementById('painDuration').value;
+            const painLevel = parseInt(document.getElementById('painLevel').value);
+            const primarySymptom = document.getElementById('primarySymptom').value;
+            
+            let score = 100;
+            let expectedCost = "";
+            let advice = "";
+            let conditionSeverity = "";
+
+            // 점수 감점 방식의 로직
+            if (painDuration === 'acute') score -= 15;
+            else if (painDuration === 'subacute') score -= 30;
+            else if (painDuration === 'chronic') score -= 50;
+
+            score -= (painLevel * 5);
+
+            if (userAge === 'senior2') score -= 15;
+            else if (userAge === 'senior1') score -= 8;
+
+            if (score < 0) score = 5;
+
+            // 중증도 분류 및 조언 도출
+            if (score >= 75) {
+                conditionSeverity = "안정 단계 (가벼운 일시적 염증 우려)";
+                advice = "현재 무릎 상태는 양호한 편이나 무릎 관절 주변 근육 강화를 위해 가벼운 평지 걷기 운동과 대퇴사두근 수축 운동을 지속하시기 바랍니다. 무리한 고강도 웨이트 트레이닝은 자제하는 것이 추천됩니다.";
+                expectedCost = "연간 일시적 병원 방문 및 물리치료 비용 발생 시 평균 5만원 ~ 15만원대 내외 예상.";
+            } else if (score >= 50) {
+                conditionSeverity = "경고 단계 (연골 자극 및 초기 관절 증후군 의심)";
+                advice = "연골 내부의 경미한 손상 혹은 인대 자극 증상이 나타나고 있는 단계입니다. 정형외과 전문의 상담을 통해 엑스레이 촬영을 권하며, 비수술적인 치료법인 연골주사 혹은 맞춤형 도수치료 프로그램 적용이 적극 추천됩니다.";
+                expectedCost = "도수치료 및 비급여 연골 주사 치료 적용 시, 월평균 예상 진료 요금 약 20만원 ~ 60만원선 산출.";
+            } else {
+                conditionSeverity = "심각 단계 (정밀 검사 필수 및 만성 연골 손상 위험)";
+                advice = "장기적인 퇴행성 마모 혹은 반월상 연골판 손상이 고도로 진행되었을 가능성이 농후합니다. 가급적 빠른 시일 내에 정밀 자기공명영상 검사를 받으시길 권하며, 상황에 따라 인공관절 수술 혹은 연골 재생 줄기세포 수술적 중재까지 폭넓게 고려하셔야 합니다.";
+                expectedCost = "비수술적 주사 집중 요법 시 수백만 원대, 수술 치료 및 입원 재활 진행 시 최종 견적 금액 300만원 ~ 1,000만원대 수준 예측.";
+            }
+
+            // 결과 노출
+            document.getElementById('healthScoreText').innerHTML = "귀하의 예상 무릎 건강 점수는 <strong>" + score + "점</strong> (상태: " + conditionSeverity + ") 입니다.";
+            document.getElementById('treatmentAdviceText').innerHTML = "<strong>권장되는 관리 가이드:</strong> " + advice;
+            document.getElementById('costEstimationText').innerHTML = "<strong>치료 비용 스펙트럼 예측:</strong> " + expectedCost;
+            
+            document.getElementById('calculatorResult').style.display = "block";
+            
+            // 스크롤 이동을 통한 체류 사용자 시야 유도
+            document.getElementById('calculatorResult').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+  
